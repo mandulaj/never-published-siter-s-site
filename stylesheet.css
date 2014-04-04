@@ -1,0 +1,411 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	font-family: Verdana, Geneva, sans-serif;
+	
+} /*setting up initial fonts*/
+
+body {
+	background-image:url(images/background1.jpg);
+	background-repeat:no-repeat;
+	background-position:center top;
+	background-attachment: fixed;
+	background-size: 100%;
+	background-color:#FFF;
+} /*background set up*/
+
+.main, .header, .footer {
+	width: 80%;
+	min-width: 630px;
+	margin-left:10%;
+} /*sets the limits of the page*/
+
+a {
+	text-decoration: none;
+} /*removes all text-deco*/
+
+.header {
+	
+}
+
+
+/* menu ******************************************************/
+.menu {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 0;
+}
+
+.menu ul {
+	list-style:none;
+}
+
+.menu li {
+	width: 15%;
+	height: 25px;
+	float:left;
+	position: relative;
+}
+
+.menu a {
+	display: block;
+	color: #2091B5;
+	font-weight: bold;
+}
+
+.menu ul li ul li {
+	float: none;
+	text-align: left;
+	margin: 0;
+	margin-left: -36px;
+	padding-top: 5px;
+	width: 120px;
+}
+
+.menu ul ul {
+	visibility:hidden;
+	background-color: #FFF;
+	border: 2px solid #1D81A1;
+	box-shadow: 2px 2px 25px gray;
+	
+}
+
+.menu li ul {
+	position: absolute;
+	top: 23px;
+	z-index: 100;
+}
+
+
+.menu  ul li:hover ul{
+	visibility:visible;
+}
+
+.menu li a:hover {
+	color: #1A576B;
+	
+}
+/* Title ************************************************/
+
+.title {
+	background-color: #2091B5;
+	background-image: url(images/title.jpg);
+	background-repeat:repeat-x;
+	margin-left: -14%;
+	margin-right: -13.2%;
+	height: 50px;
+	border: 1px solid #2091B5;
+	box-shadow: 3px 3px 25px black;
+	
+}
+	
+.title h1 {
+	margin-top: 7px;
+	margin-left: 13%;
+	color: #FFF;
+	float: left;
+	margin-right: 10px;
+}
+
+.title h1 span{
+	color: #B3B3B3;
+}
+.title h2 {
+	margin-top: 15px;
+	color: #D2232B;
+	color: #FFF;
+}
+
+
+/* Velka kniha ************************************************/
+
+#kniha {
+	clear: both;
+	margin-top: 0%;
+	width: 32%;
+	height: 32%;
+	border: 2px solid #1D81A1;
+	float: right;
+	min-width: 300px;
+	min-height:400px;
+	box-shadow: 3px 3px 10px black;
+}
+
+#kniha:hover {
+	margin-top: -1%;
+	margin-right: -1%;
+	width: 35%;
+	height: 35%;
+	
+}
+
+/* Text ************************************************************************************/
+.main, .content {
+	clear:both;
+}
+
+#texts div {
+	position:absolute;
+	z-index: 1;
+}
+
+
+#okatce , #knizka{
+	width: 350px;
+	font-size:15px;
+	padding: 150px;
+	color: #FFF;
+	
+}
+
+#okatce {
+	background:url(images/splat1.png);
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+
+#knizka {
+	left: 110px;
+}
+
+
+/* Socialni site --------------------------------*/
+
+#social {
+	clear: both;
+	margin: 0;
+	margin-top: 200px;
+	margin-left: -10%;
+	position: absolute;
+	z-index: 2;
+}
+
+#social a {
+	text-decoration: none;
+	display: block;
+	font-weight:bold;
+	color: #FFF;
+	padding: 18px;
+	padding-left:25px;
+}
+
+.social_box {
+	margin-left: -30px;
+	text-align: right;
+	width: 150px;
+	border-radius: 7px;
+	box-shadow: 2px 2px 15px black;
+}
+
+#fb {
+	margin-top: 3px;
+	background-color: #3B5998;
+}
+
+
+#tw {
+	margin-top: 3px;
+	background-color: #009FD0;
+}
+
+
+#kp {
+	margin-top: 3px;
+	background-color: #B6B6B6;
+}
+
+
+#kp img {
+	margin-left: 30px;
+	margin-top: 12px;
+	float: left;
+}
+
+#fb:hover {
+	margin-left: -14px;
+}
+
+#tw:hover {
+	margin-left: -14px;
+}
+
+#kp:hover {
+	margin-left: -14px;
+}
+ 
+/* Video --------------------------------*/
+#videopg {
+	padding: 0;
+	margin-left: -10px;
+	width: auto;
+	background-color: #FFF;
+	position: absolute;
+	width: 100%;
+	height: 98%;
+	visibility: hidden;
+	z-index: 100;
+	min-width: 630px;
+}
+#videopg span {
+	margin-top: 100px;
+	margin-left: 50%;
+	
+}
+
+/* Map site *****************************************/
+
+
+#map {
+	position: absolute;
+	margin-top:10px;
+	margin-left: 50px;
+	margin-bottom: 10px;
+	background-image:url(images/g5.png);
+	background-size:contain;
+	width: 1019px; /*<-- g5 = 1019px*/
+	height: 600px;
+	z-index: 0;
+}
+
+#map div , #map h2 {
+	position: absolute;
+	z-index: 0;
+}
+
+#maptitle {
+	color: #2091B5;
+}
+
+.city a {
+	vertical-align: middle;
+	font-weight:bold;
+	text-decoration:none;
+	color: #2091B5;
+	font-size:12px;
+	/*visibility: hidden*/
+	
+}
+
+.city img {
+	
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+	visibility:visible;
+}
+
+.city:hover a img {
+	width: 20px;
+	height: 20px;
+	margin-top: -1px;
+	margin-left: -1px;
+	
+}
+
+.city:hover a {
+	color: #1A576B;
+	visibility:visible;
+}
+
+#city2 a img , #city4 a img, #city6 a img , #city7 a img , #city10 a img , #city11 a img , #city13 a img{ /*exception for those with text on left*/
+	margin-left: 5px;
+	margin-right: 0;
+}
+
+#city1 {
+	top: 347px;
+	left: 99px;
+	
+}
+
+#city2 {
+	top: 418px;
+	left: 160px;
+}
+
+#city3 {
+	top: 430px;
+	left: 272px;
+}
+
+#city4 {
+	top: 470px;
+	left: 360px;
+}
+
+#city5 {
+	top: 485px;
+	left: 495px;
+}
+
+#city6 {
+	top: 510px;
+	left: 540px;
+}
+
+#city7 {
+	top: 527px;
+	left: 545px;
+}
+
+#city8 {
+	top: 540px;
+	left: 640px;
+}
+
+#city9 {
+	top: 520px;
+	left: 680px;
+}
+
+#city10 {
+	top: 470px;
+	left: 810px;
+}
+
+#city11 {
+	top: 445px;
+	left: 760px;
+}
+
+#city12 {
+	top: 445px;
+	left: 965px;
+}
+
+#city13 {
+	top: 558px;
+	left: 825px;
+}
+
+
+/* Partneri ************************************************************************************/
+
+
+
+#partner_logo {
+	width: 100%;
+}
+
+.partner {
+	float:left;
+	margin: 2%;
+	width: 45%;
+}
+
+.partner a h3, #pgtitle {
+	color: #2091B5;
+}
+
+.partner a h3 {
+	text-align: center;
+}
+
+.partner:hover a h3{
+	color: #1A576B;
+}
+
+
+
+
