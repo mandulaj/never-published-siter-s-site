@@ -12,11 +12,12 @@
         <meta name="keywords" content="Vladivostop, Vladivostok ">
         <meta name="author" content="Kateřina Mandulová">
         <meta name="description" content="Cesta na Sibiř a ještě dál...">
-        <link type="text/css" rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.min.css" >
+        <link type="text/css" rel="stylesheet" href="bootstrap-3.1.1-dist/css//bootstrap.min.css" />
         <link type="text/css" rel="stylesheet" href="stylesheet.css" />
         <link rel="icon" href="images/favicon.ico" />
         <script type="text/javascript" src="jquery-1.9.1.js"> </script>
         <script type="text/javascript" src="video.js"></script>
+        <script type="text/javascript" src="script.js"></script>
         <title>Vladivostop</title>
     </head>
     
@@ -80,38 +81,54 @@
 					</li>
 				</ul> <!-- end of menu-->
 			</div>
+            
+            
         </div> <!-- end of header -->
+        <div class="title">
+            <h1><span>VLADIVO</span>STOP</h1>
+            <h2>Kateřina Mandulová</h2>
+        </div>
+        <div id="small_social" class="container visible-sm visible-xs">
+            <div class="row">
+                <div id="fb_small" class="col-xs-3">Facebook</div>
+                <div id="tw_small" class="col-xs-3">Twitter</div>
+                <div id="gp_small" class="col-xs-3">Google+</div>
+                <div id="kp_small" class="col-xs-3">Koupit</div>
+            </div>
+        </div>
         
         <div class="main">
-			<div class="title">
-				<h1><span>VLADIVO</span>STOP</h1>
-				<h2>Kateřina Mandulová</h2>
-            </div>
-            <div id="social">
+			  
+            <div id="social" class="hidden-xs hidden-sm">
 				<div class="social_box" id="fb"><a href="#">Facebook</a></div>
 				<div class="social_box" id="tw"><a href="#">Twitter</a></div>
+                <div class="social_box" id="gp"><a href="#">Google+</a></div>
 				<div class="social_box" id="kp"><img src="images/cart.png" width="30px" height="30px"/><a href="#">Koupit</a></div>
 			</div>
             
             
             <div id="content">
-                <a href="#"><img id="kniha" title="Vladivostop" src="images/23_prebal_01.jpg"/></a>
-                
-                <div id="texts">
-                	<div id="okatce">
-                    	<p>Kateřina Mandulová: právnička a nezávislá cestovatelka. Na cestách ztrávila více než tři roky života. Stopem procestovala Sibiř a Dálný východ, americký divoký západ, 
-            
-            jihoamerické Altiplano i poušť Atakama, tibetskou náhorní plošinu, pákistánský Karakoram, kazašskou step i gruzinsko-turecké pohraničí. Často křižuje Evropu, proto i Vás si 
-            
-            někdy může stopnout na evopských dálnicích.
-            			</p>
-                	</div>
-                   
-			
-                	<div id="knizka">
-                        
-        				<p>Kateřina vypráví o jízdě autostopem z Třebíče do Vladivostoku. Na cestu se vypravila v létě roku 2009. Cestovala na vlastní pěst s batohem na zádech. Potkala zajímavé lidi, prozkoumala ruská velkoměsta i sibiřskou divočinu a poznala Rusko jiné, než jaké známe z večerních zpráv. 
-                        </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6" id="texts">
+                            <div id="okatce">
+                                <p><strong>Kateřina Mandulová</strong>: právnička a nezávislá cestovatelka. Na cestách ztrávila více než tři roky života. Stopem procestovala Sibiř a Dálný východ, americký divoký západ, 
+
+                    jihoamerické Altiplano i poušť Atakama, tibetskou náhorní plošinu, pákistánský Karakoram, kazašskou step i gruzinsko-turecké pohraničí. Často křižuje Evropu, proto i Vás si 
+
+                    někdy může stopnout na evopských dálnicích.
+                                </p>
+                            </div>
+
+
+                            <div id="knizka">
+
+                                <p>Kateřina vypráví o jízdě autostopem z Třebíče do Vladivostoku. Na cestu se vypravila v létě roku 2009. Cestovala na vlastní pěst s batohem na zádech. Potkala zajímavé lidi, prozkoumala ruská velkoměsta i sibiřskou divočinu a poznala Rusko jiné, než jaké známe z večerních zpráv. 
+                                </p>
+                            </div>
+                        </div>
+                        <a class="col-md-6" href="#"><img id="kniha" title="Vladivostop" src="images/23_prebal_01.jpg"/>
+                        </a>
                     </div>
                 </div>
         	</div><!-- end content-->
