@@ -6,6 +6,9 @@
 } /*setting up initial fonts*/
 
 body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 	background-image:url(images/background1.jpg);
 	background-repeat:no-repeat;
 	background-position:center top;
@@ -16,12 +19,14 @@ body {
 
 .main, .header, .footer {
 	width: 80%;
-	min-width: 630px;
+	/min-width: 630px;
 	margin-left:10%;
 } /*sets the limits of the page*/
 
 a {
 	text-decoration: none;
+    -webkit-transition: 0.5s color;
+    transition: 0.5s color;
 } /*removes all text-deco*/
 
 .header {
@@ -88,33 +93,57 @@ a {
 }
 /* Title ************************************************/
 
+
 .title {
-	background-color: #2091B5;
-	background-image: url(images/title.jpg);
-	background-repeat:repeat-x;
-	margin-left: -14%;
-	margin-right: -13.2%;
-	height: 50px;
-	border: 1px solid #2091B5;
-	box-shadow: 3px 3px 25px black;
-	
+    background-color: #2091B5;
+    background-repeat:repeat-x;
+    margin-left: -14%;
+    margin-right: -13.2%;
+    height: 50px;
+    border: 1px solid #2091B5;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-	
+
 .title h1 {
-	margin-top: 7px;
-	margin-left: 13%;
-	color: #FFF;
-	float: left;
-	margin-right: 10px;
+    margin-top: 7px;
+    margin-left: 13%;
+    color: #FFF;
+    float: left;
+    margin-right: 10px;
 }
 
 .title h1 span{
-	color: #B3B3B3;
+    color: #B3B3B3;
 }
 .title h2 {
-	margin-top: 15px;
-	color: #D2232B;
-	color: #FFF;
+    margin-top: 15px;
+    color: #D2232B;
+    color: #FFF;
+}
+
+
+@media (max-width:660px )
+{
+    .title {
+        height: 100px;
+        background-image: none;
+        text-align: center;
+    }
+    
+    .title h1 {
+        float: none;
+        margin-left: 0;
+    }
+    
+    .title h1 span {
+        
+    }
+    
+    .title h2 {
+        margin-left: 0;
+    }
+    
 }
 
 
@@ -130,6 +159,8 @@ a {
 	min-width: 300px;
 	min-height:400px;
 	box-shadow: 3px 3px 10px black;
+    -webkit-transition: 0.2s margin, 0.2s width, 0.2s height;
+    transition: 0.2s margin, 0.2s width, 0.2s height;
 }
 
 #kniha:hover {
@@ -139,6 +170,7 @@ a {
 	height: 35%;
 	
 }
+
 
 /* Text ************************************************************************************/
 .main, .content {
@@ -155,14 +187,12 @@ a {
 	width: 350px;
 	font-size:15px;
 	padding: 150px;
-	color: #FFF;
+	color: #000;
 	
 }
 
 #okatce {
-	background:url(images/splat1.png);
-	background-repeat:no-repeat;
-	background-size:contain;
+	
 }
 
 #knizka {
@@ -193,11 +223,17 @@ a {
 .social_box {
 	margin-left: -30px;
 	text-align: right;
-	width: 150px;
+	width: 160px;
 	border-radius: 7px;
 	box-shadow: 2px 2px 15px black;
+    -webkit-transition: 0.2s margin;
+    transition: 0.2s margin;
 }
 
+#fb {
+	margin-top: 3px;
+	background-color: #3B5998;
+}
 #fb {
 	margin-top: 3px;
 	background-color: #3B5998;
@@ -217,7 +253,7 @@ a {
 
 
 #kp img {
-	margin-left: 30px;
+	margin-left: 45px;
 	margin-top: 12px;
 	float: left;
 }
@@ -237,15 +273,15 @@ a {
 /* Video --------------------------------*/
 #videopg {
 	padding: 0;
-	margin-left: -10px;
 	width: auto;
 	background-color: #FFF;
 	position: absolute;
 	width: 100%;
-	height: 98%;
-	visibility: hidden;
+	height: 100%;
 	z-index: 100;
-	min-width: 630px;
+	
+    overflow: hidden;
+    display: none;
 }
 #videopg span {
 	margin-top: 100px;
