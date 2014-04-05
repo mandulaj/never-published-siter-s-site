@@ -1,7 +1,7 @@
 // JavaScript Document
 function endM(){
 	//Function handler to end the video
-	intitialCss(2);
+	//intitialCss(2);
 	$("#videopg").fadeOut("fast");
 	
 }
@@ -50,10 +50,11 @@ $(document).ready(function($) {
 			oldIE = false;
 		}
 		
+        
 		if(oldIE == false)
 		{
-			intitialCss(1);
-			$("#videopg").css("visibility" ,"visible"); //<--- visible
+			//intitialCss(1);
+			$("#videopg").css("display" ,"none"); //<--- visible
 			var myVideo=document.getElementById("video")
 			myVideo.addEventListener('ended',endM,false);
 			myVideo.play();
