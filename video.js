@@ -6,6 +6,22 @@ function endM(){
 	
 }
 
+function mobilecheck() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  } 
+}
+
 function intitialCss(pos){
 	//Function setting the initial settings for the video display
 	if (pos == 1)
@@ -18,6 +34,9 @@ function intitialCss(pos){
 	}
 	
 }
+
+
+
 
 function checkURL(){ //returns 1 if "v=old" is in the URL else returns 0
 	if (location.href.match("v=old"))
@@ -37,7 +56,13 @@ $(document).ready(function($) {
 	//Function testing the compatibility of the browser, displaying the video and starting it.
 	
 	"use strict";
-	if(checkURL()) // test if the page is opended new, if not exit
+    
+    if (navigator.appName == "Microsoft Internet Explorer") {
+        $(".kniha").html("<img id='ie_book' src='images/23_prebal_01.jpg'>")
+        
+    }
+    alert(navigator.appName)
+	if(checkURL() || mobilecheck() ) // test if the page is opended new, if not exit
 	{
 		return 0;
 	}
@@ -54,7 +79,7 @@ $(document).ready(function($) {
 		if(oldIE == false)
 		{
 			//intitialCss(1);
-			$("#videopg").css("display" ,"none"); //<--- visible
+			$("#videopg").css("display" ,"block"); //<--- visible
 			var myVideo=document.getElementById("video")
 			myVideo.addEventListener('ended',endM,false);
 			myVideo.play();
