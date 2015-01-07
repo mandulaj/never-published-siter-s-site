@@ -61,7 +61,6 @@ $(document).ready(function($) {
         $(".kniha").html("<img id='ie_book' src='images/23_prebal_01.jpg'>")
         
     }
-    alert(navigator.appName)
 	if(checkURL() || mobilecheck() ) // test if the page is opended new, if not exit
 	{
 		return 0;
